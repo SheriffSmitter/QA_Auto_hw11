@@ -10,7 +10,7 @@ from selene import have, browser
 @allure.label("owner", "Vadim Korolev")
 @allure.feature("Регистрация")
 @allure.story("Проверка заполнения формы регистрации")
-def test_complete_todo():
+def test_complete_todo(setup_browser):
     with allure.step("Открыть форму"):
         browser.open('automation-practice-form/')
 
