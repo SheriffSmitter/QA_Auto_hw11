@@ -1,11 +1,11 @@
-import os
-
 import pytest
+
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from utilities import attachment
+
 
 DEFAULT_BROWSER_VERSION = "100.0"
 
@@ -32,11 +32,8 @@ def setup_browser(request):
     }
     options.capabilities.update(selenoid_capabilities)
 
-    login = os.getenv('LOGIN')
-    password = os.getenv('PASSWORD')
-
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        command_executor=f"https://user1:1234@selenoid.autotests.cloud/wd/hub",
         options=options
     )
 

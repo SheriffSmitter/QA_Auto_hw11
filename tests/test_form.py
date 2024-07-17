@@ -5,7 +5,7 @@ from allure_commons.types import Severity
 from selene import have
 
 
-@allure.tag("web")
+@allure.tag("DEMOQA")
 @allure.severity(Severity.BLOCKER)
 @allure.label("owner", "Vadim Korolev")
 @allure.feature("Регистрация")
