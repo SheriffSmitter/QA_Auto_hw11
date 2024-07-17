@@ -12,7 +12,6 @@ from selene import have
 @allure.story("Проверка заполнения формы регистрации")
 def test_complete_todo(setup_browser):
     browser = setup_browser
-    browser.driver.execute_script("document.body.style.zoom='90%'")
     with allure.step("Открыть форму"):
         browser.open('automation-practice-form/')
     with allure.step("Заполнить имя"):
